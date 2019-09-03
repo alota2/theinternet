@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-09-01T23:15:21Z" name="Suite" finished-at="2019-09-01T23:15:25Z" duration-ms="4077">
+  <suite started-at="2019-09-02T23:12:56Z" name="Suite" finished-at="2019-09-02T23:13:03Z" duration-ms="7348">
     <groups>
     </groups>
-    <test started-at="2019-09-01T23:15:21Z" name="Test" finished-at="2019-09-01T23:15:25Z" duration-ms="4077">
+    <test started-at="2019-09-02T23:12:56Z" name="Test" finished-at="2019-09-02T23:13:03Z" duration-ms="7348">
       <class name="NewTest">
-        <test-method signature="f()[pri:0, instance:NewTest@2f8f5f62]" started-at="2019-09-01T23:15:21Z" name="f" finished-at="2019-09-01T23:15:25Z" duration-ms="4057" status="PASS">
+        <test-method signature="f()[pri:0, instance:NewTest@2f8f5f62]" started-at="2019-09-02T23:12:56Z" name="f" finished-at="2019-09-02T23:13:03Z" duration-ms="7327" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
