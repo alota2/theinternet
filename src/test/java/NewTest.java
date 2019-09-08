@@ -1,34 +1,88 @@
 import static org.testng.Assert.assertEquals;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class NewTest {
+	WebDriver driver;
 	
-  @Parameters({"url"})	
-  @Test
-  public void f(String url) {
-	  System.out.println("test comment");
-	  
-	  //String baseUrl = "https://the-internet.herokuapp.com/";
-	  String baseUrl = url;
-	  
-	  System.out.println("The url is " +baseUrl);
-	  
-	  System.setProperty("webdriver.chrome.driver","/home/lesly/Downloads/selenium/chromedriver");
-		WebDriver driver = new ChromeDriver();
+	
+	@BeforeTest
+	@Parameters({"browser", "url"})	
+	public void startWebDriver(String browser, String url) throws MalformedURLException {
+		String baseUrl = url;
+		
+		//String baseUrl = "https://the-internet.herokuapp.com/";
 		
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
-		 driver.get(baseUrl);
+		System.out.println("The url is " +baseUrl);
+		
+		String projectPath = System.getProperty("user.dir");
+
+		if(browser.equalsIgnoreCase("localchrome")) {
+			System.setProperty("webdriver.chrome.driver",projectPath+"/src/test/resources/browserdrivers/chromedriver");
+			driver = new ChromeDriver();
+
+		}
+		
+		if(browser.equalsIgnoreCase("localfirefox")) {
+			System.setProperty("webdriver.gecko.driver",projectPath+"/src/test/resources/browserdrivers/geckodriver");
+			driver = new FirefoxDriver();
+
+		}
+		
+		if(browser.equalsIgnoreCase("localinternetexplorer")) {
+			System.setProperty("webdriver.ie.driver",projectPath+"/src/test/resources/browserdrivers/IEDriverServer.exe");
+			driver = new InternetExplorerDriver();
+
+		}
+		
+		if(browser.equalsIgnoreCase("remotechrome")) {
+			new DesiredCapabilities();
+			DesiredCapabilities capability = DesiredCapabilities.chrome();
+			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
+
+		}
+		
+		if(browser.equalsIgnoreCase("remotefirefox")) {
+			new DesiredCapabilities();
+			DesiredCapabilities capability = DesiredCapabilities.firefox();
+			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
+
+		}
+		
+		if(browser.equalsIgnoreCase("remoteinternetexplorer")) {
+			new DesiredCapabilities();
+			DesiredCapabilities capability = DesiredCapabilities.internetExplorer();
+			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
+
+		}
+		
+		
+		driver.get(baseUrl);
+	}
+  
+  @Test
+  public void dynamicLoadingTest() {
+	  System.out.println("test comment");
+	  
 	     driver.manage().window().maximize();
 	     String expectedHomePageTitle = "The Internet";
 	     String homePageTitle = driver.getTitle();

@@ -2,12 +2,28 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-09-02T23:12:56Z" name="Suite" finished-at="2019-09-02T23:13:03Z" duration-ms="7348">
+  <suite started-at="2019-09-04T01:00:44Z" name="Suite" finished-at="2019-09-04T01:00:53Z" duration-ms="9702">
     <groups>
     </groups>
-    <test started-at="2019-09-02T23:12:56Z" name="Test" finished-at="2019-09-02T23:13:03Z" duration-ms="7348">
+    <test started-at="2019-09-04T01:00:44Z" name="Test" finished-at="2019-09-04T01:00:53Z" duration-ms="9702">
       <class name="NewTest">
-        <test-method signature="f()[pri:0, instance:NewTest@2f8f5f62]" started-at="2019-09-02T23:12:56Z" name="f" finished-at="2019-09-02T23:13:03Z" duration-ms="7327" status="PASS">
+        <test-method is-config="true" signature="startWebDriver(java.lang.String, java.lang.String)[pri:0, instance:NewTest@5e57643e]" started-at="2019-09-04T01:00:44Z" name="startWebDriver" finished-at="2019-09-04T01:00:47Z" duration-ms="3276" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[remotefirefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://the-internet.herokuapp.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWebDriver -->
+        <test-method signature="f()[pri:0, instance:NewTest@5e57643e]" started-at="2019-09-04T01:00:47Z" name="f" finished-at="2019-09-04T01:00:53Z" duration-ms="6412" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->

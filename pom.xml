@@ -36,6 +36,7 @@
                 <suiteXmlFile>testng.xml</suiteXmlFile>
               </suiteXmlFiles>
               <systemPropertyVariables>
+              <propertyName>${browser}</propertyName>
 			<propertyName>${url}</propertyName>
 		    </systemPropertyVariables>
             </configuration>
