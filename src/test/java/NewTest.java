@@ -93,9 +93,8 @@ public class NewTest {
 	     
 	     System.out.println("home page title is " + homePageTitle);
 	     
-	     // driver.findElement(By.linkText("Dynamic Loading")).click();
-	     driver.findElement(By.linkText("cookie")).click();
-	     
+	     driver.findElement(By.linkText("Dynamic Loading")).click();
+	   
 	     String dynamicLoadingHeading = driver.findElement(By.tagName("h3")).getText().toString();
 	     
 	     String dynamicLoadingExpected = "Dynamically Loaded Page Elements";
