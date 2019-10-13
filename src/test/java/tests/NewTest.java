@@ -1,3 +1,4 @@
+package tests;
 import static org.testng.Assert.assertEquals;
 
 import java.net.MalformedURLException;
@@ -31,7 +32,7 @@ public class NewTest {
 		//String baseUrl = "https://the-internet.herokuapp.com/";
 		
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
+			
 		System.out.println("The url is " +baseUrl);
 		
 		String projectPath = System.getProperty("user.dir");

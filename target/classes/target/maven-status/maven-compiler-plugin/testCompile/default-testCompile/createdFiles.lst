@@ -1,3 +1,6 @@
-WebDriverTasks.class
-NewTest_local.class
-NewTest.class
+core/WebDriverTasks.class
+tests/NewTest.class
+pages/HomePage.class
+pages/LoginPage.class
+tests/Regression.class
+pages/DynamicLoadingPage.class

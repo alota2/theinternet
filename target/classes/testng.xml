@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel="false" name="Suite">
-<!-- <parameter name="browser"  value="localchrome"/> -->
-<!-- <parameter name="url"  value="https://the-internet.herokuapp.com"/> -->
+<parameter name="browser"  value="localchrome"/>
+<parameter name="url"  value="https://the-internet.herokuapp.com"/>
   <test name="Test">
     <classes>
-      <class name="NewTest"/>
+      <class name="tests.Regression"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

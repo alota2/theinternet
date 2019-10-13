@@ -1,17 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.613 s <<< FAILURE! - in TestSuite
-dynamicLoadingTest(NewTest)  Time elapsed: 0.183 s  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"link text","selector":"cookie"}
-  (Session info: chrome=76.0.3809.132)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'lesly-desktop', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.0.0-27-generic', java.version: '11.0.4'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.132, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: /tmp/.com.google.Chrome.iNcK35}, goog:chromeOptions: {debuggerAddress: localhost:39109}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 1d6935c08783aba47a72ee669865084f
-*** Element info: {Using=link text, value=cookie}
-	at NewTest.dynamicLoadingTest(NewTest.java:97)
-
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.172 s - in TestSuite

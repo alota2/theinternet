@@ -1,30 +1,34 @@
+package core;
 import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 public class WebDriverTasks {
 	
-	WebDriver driver;
-	
-	@Parameters({"browser", "url"})	
-	public void startWebDriver(String browser, String url) throws MalformedURLException {
-		String baseUrl = url;
+	public static WebDriver driver;
+		
+	public static void startWebDriver(String browser) throws MalformedURLException {
+		
 		
 		//String baseUrl = "https://the-internet.herokuapp.com/";
 		
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
-		System.out.println("The url is " +baseUrl);
 		
 		String projectPath = System.getProperty("user.dir");
 
@@ -68,8 +72,32 @@ public class WebDriverTasks {
 		}
 		
 		
-		driver.get(baseUrl);
 	}
+	
+	public static void goToURL(String url) {
+		driver.get(url);
+		
+	}
+	
+	public static void maximizeWindow() {
+	
+		driver.manage().window().maximize();
+		
+	}
+	
+	public static void closeWindow() {
+		
+		driver.close();
+		
+	}
+	
+public static void quitWebDriver() {
+		
+		driver.quit();
+		
+	}
+	
+
   
 
 }
